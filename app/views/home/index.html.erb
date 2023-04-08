@@ -1,0 +1,27 @@
+<div class="container" data-controller="home">
+  <div class="banner">
+    <%= render 'shared/banner' %>
+  </div>
+
+  <h1 class="title">Buscador de CEP</h1>
+
+  <div class="container-input">
+    <input type="text" data-home-target="cepInput" data-action="keyup->home#onEnter" placeholder="Digite seu cep.."/>
+
+    <button class="button-search" data-action="click->home#getCep">
+      <%= icon("fa-solid", "magnifying-glass")%>
+    </button>
+  </div>
+
+  <main class="main hidden" data-home-target="main">
+    <h2 data-home-target="cep"></h2>
+    <span data-home-target="street"></span>
+    <span data-home-target="neighborhood"></span>
+    <span data-home-target="cityState"></span>
+    <div data-home-target="error"></div>
+  </main>
+
+  <footer>
+    <span>© 2023 By WendelPaco</span>
+  </footer>
+</div>
